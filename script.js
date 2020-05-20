@@ -124,24 +124,24 @@
 
 // learnJS('JavaScript', done);
 
-const options = {
-    name: 'test',
-    width: 1024,
-    height: 1024,
-    colors: {
-        border: 'black',
-        background: 'red'
-    },
-    makeTest: function() {
-        console.log("Test manual method...");
-    }
-};
+// const options = {
+//     name: 'test',
+//     width: 1024,
+//     height: 1024,
+//     colors: {
+//         border: 'black',
+//         background: 'red'
+//     },
+//     makeTest: function() {
+//         console.log("Test manual method...");
+//     }
+// };
 
-options.makeTest();
+// options.makeTest();
 
-const {border, background} = options.colors;
+// const {border, background} = options.colors;
 
-console.log(border);
+// console.log(border);
 
 // console.log(Object.keys(options).length);
 
@@ -166,3 +166,69 @@ console.log(border);
 // }
 
 // console.log(counter);
+
+// const arr = [156, 29, 21, 333, 38];
+
+// arr.sort(compareNum);
+
+// function compareNum(a, b) {
+//     return a - b;
+// } 
+
+// console.log(arr);
+
+// // arr.pop();
+// arr.push(10);
+
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+// for (let value of arr) {
+//     console.log(value);
+// }
+
+// arr.forEach(function(item, i, arr) {
+//     console.log(`${i}: ${item} внутри массива ${arr}`);
+// });
+
+
+// const str = prompt("", "");
+// const products = str.split(", ");
+// products.sort();
+
+// console.log(products.join('; '));
+
+const obj = {
+    a: 5,
+    b: 1
+};
+
+function copy(mainObj) {
+    let objCopy = {};
+
+    let key;
+    for(key in mainObj) {
+        objCopy[key] = mainObj[key];
+    }
+
+    return objCopy;
+}
+
+const numbers = {
+    a: 5,
+    b: 7,
+    c: {
+        x: 10,
+        z: 111
+    }
+};
+
+const newNumbers = copy(numbers);
+
+newNumbers.a = 33;
+
+console.log(numbers);
+console.log(newNumbers);
